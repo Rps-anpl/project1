@@ -1,0 +1,10 @@
+@for(u of users;track u)
+{
+    @if($odd){
+                <p style="background-color: gray;">{{$index+1}}-{{u}}</p>
+             }
+    @if($even){
+         <p style="background-color: rgb(92, 92, 92);">{{$index+1}}-{{u}}</p>
+        }
+
+}

@@ -1,0 +1,26 @@
+<div class="text-center my-2">
+    Total Tasks: {{ taskCount }}
+</div>
+
+<div class=" d-flex justify-content-center align-items-center my-3">
+    <input type="text" [(ngModel)]="task" class="form-control me-2 w-25" placeholder="Enter new task">
+    <button class="btn btn-dark" (click)="addTask()">add task</button>
+    
+</div>
+
+@for (task of taskList; track task.id) {
+  <ul class="d-flex justify-content-center align-items-center">
+    <span>{{ $index + 1 }}</span>   
+    <span class="w-25 p-1 me-2 ms-3 border rounded-2">{{ task.task }}</span>
+    <span>
+      <button (click)="deleteTask(task.id)" class="btn btn-dark">Delete</button>
+    </span>
+  </ul>
+}
+
+
+
+
+
+
+
